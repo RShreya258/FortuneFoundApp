@@ -1,19 +1,25 @@
 // const Stack = createNativeStackNavigator();
 import * as React from 'react';
 // import {NavigationContainer} from '@react-navigation/native';
+// import HomePage from './screens/HomeScreen/home';
 
-import LandingPage from './screens/LandingPage';
-import Food from './screens/Food';
-import ConfirmCloth from './screens/ConfirmCloth';
-import Grocery from './screens/Grocery';
-import Payment from './screens/Payment';
-import Money from './screens/Money';
-import NgoPage from './screens/NgoPage';
-import SelectCategory from './screens/SelectCategory';
-import ConfirmFoodDetails from './screens/ConfirmFoodDetails';
-import DonationPage from './screens/DonationPage';
-import Profile from './screens/Profile';
-import Signup from './screens/Signup';
+import LandingPage from './src/screens/LandingPage';
+import Food from './src/screens/Food';
+import ConfirmCloth from './src/screens/ConfirmCloth';
+import Grocery from './src/screens/Grocery';
+import Payment from './src/screens/Payment';
+import Money from './src/screens/Money';
+import ngopage from './src/screens/ngopage';
+import SelectCategory from './src/screens/SelectCategory';
+import ConfirmFoodDetails from './src/screens/ConfirmFoodDetails';
+import DonationPage from './src/screens/DonationPage';
+import Profile from './src/screens/Profile';
+import Login from './src/screens/Login';
+import Signup from './src/screens/Signup';
+import Thanks from './src/screens/Thank';
+import Pickup from './src/screens/Pickup';
+
+import History from './src/screens/History';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -34,6 +40,11 @@ const App = () => {
               component={LandingPage}
               options={{headerShown: false}}
             />
+            {/* <Stack.Screen
+              name="Homepage"
+              component={HomePage}
+              options={{headerShown: false}}
+            /> */}
             <Stack.Screen
               name="Food"
               component={Food}
@@ -49,6 +60,7 @@ const App = () => {
               component={Grocery}
               options={{headerShown: false}}
             />
+
             <Stack.Screen
               name="Payment"
               component={Payment}
@@ -60,8 +72,8 @@ const App = () => {
               options={{headerShown: false}}
             />
             <Stack.Screen
-              name="NgoPage"
-              component={NgoPage}
+              name="ngopage"
+              component={ngopage}
               options={{headerShown: false}}
             />
             <Stack.Screen
@@ -85,8 +97,28 @@ const App = () => {
               options={{headerShown: false}}
             />
             <Stack.Screen
+              name="History"
+              component={History}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
               name="Signup"
               component={Signup}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Login"
+              component={Login}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Pickup"
+              component={Pickup}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name="Thanks"
+              component={Thanks}
               options={{headerShown: false}}
             />
           </Stack.Navigator>
